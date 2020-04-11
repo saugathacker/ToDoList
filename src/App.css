@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+.input {
+  width: 400px;
+  margin: auto;
+  border: 1px solid whitesmoke;
+  padding-bottom: 10px;
+  background-color: teal;
+}
+
+#deadline {
+  color: white;
+}
