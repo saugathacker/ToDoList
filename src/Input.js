@@ -1,16 +1,21 @@
 import React from "react";
 import "./App.css";
-const input = () => {
+const input = (props) => {
   return (
-    <div className="input">
-      <p>Enter your task</p>
-      <input type="text" placeholder="Enter your task" name="title" size="40" />
-      <p>Enter deadline</p>
-      <input type="datetime-local" name="deadline"></input>
-      <br />
-      <br />
-      <button>Add</button>
+    <div className="Input">
+      <form onSubmit={props.addTodo}>
+        <label>Enter your task: </label>
+        <input type="text" onChange={props.changeHandler} value={props.task} />
+        <br />
+        <br />
+        <label>Enter your dealine: </label>
+        <input type="datetime-local"></input>
+        <br />
+        <br />
+        <input type="submit" value="Add Task" />
+      </form>
     </div>
   );
 };
+
 export default input;
